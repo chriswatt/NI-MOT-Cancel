@@ -29,8 +29,8 @@ if(isSearchPage == true) {
 	var lisburnDate = $('option[value="40"]').attr('data-firstavailable');
 	var malluskDate = $('option[value="42"]').attr('data-firstavailable');
 	var craigavonDate = $('option[value="36"]').attr('data-firstavailable');
-	var balmoralDate = $('option[value="33"]').attr('data-firstavailable');
-	var craigavonDate = $('option[value="44"]').attr('data-firstavailable');
+    var balmoralDate = $('option[value="33"]').attr('data-firstavailable');
+    var newtonardsDate = $('option[value="44"]').attr('data-firstavailable');
 
 	// The location + date will show either red or green depending on the search month
 	// Change the searchMonth value for the month you wish to search up to (i.e. 9 = September))
