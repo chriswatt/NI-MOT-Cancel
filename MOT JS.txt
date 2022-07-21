@@ -29,6 +29,8 @@ if(isSearchPage == true) {
 	var lisburnDate = $('option[value="40"]').attr('data-firstavailable');
 	var malluskDate = $('option[value="42"]').attr('data-firstavailable');
 	var craigavonDate = $('option[value="36"]').attr('data-firstavailable');
+	var balmoralDate = $('option[value="33"]').attr('data-firstavailable');
+	var craigavonDate = $('option[value="44"]').attr('data-firstavailable');
 
 	// The location + date will show either red or green depending on the search month
 	// Change the searchMonth value for the month you wish to search up to (i.e. 9 = September))
@@ -76,4 +78,34 @@ if(isSearchPage == true) {
 	
 	$(div).attr('style', style);
 	$('body').prepend($(div).clone().prop('innerHTML', 'Lisburn: ' + lisburnDate));
-}
+	
+	// Location 4
+	var check = balmoralDate != undefined ? balmoralDate.split('/')[1] : 99;
+	
+	if (check < 9){
+		style += 'background-color:#7df955;';
+		clearInterval(timerId);
+	} else {
+		style += 'background-color:#f9557d;';
+	}
+	
+	$(div).attr('style', style);
+	$('body').prepend($(div).clone().prop('innerHTML', 'Balmoral: ' + balmoralDate));
+
+
+	
+	// Location 5
+	var check = newtonardsDate != undefined ? newtonardsDate.split('/')[1] : 99;
+	
+	if (check < 9){
+		style += 'background-color:#7df955;';
+		clearInterval(timerId);
+	} else {
+		style += 'background-color:#f9557d;';
+	}
+	
+	$(div).attr('style', style);
+	$('body').prepend($(div).clone().prop('innerHTML', 'Newtonards: ' + newtonardsDate));
+
+}	
+	
